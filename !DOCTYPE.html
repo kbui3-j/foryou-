@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anh 10 Gió</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+}
+
+button{
+    padding:15px 30px;
+    font-size:22px;
+    border:none;
+    border-radius:15px;
+    background:#ffd700;
+    color:#000;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.container{
+    display:none;
+    text-align:center;
+    animation:zoomIn 1s ease;
+}
+
+.container img{
+    width:350px;
+    max-width:90%;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(255,255,255,0.6);
+}
+
+.text{
+    margin-top:20px;
+    font-size:50px;
+    font-weight:bold;
+    color:#fff;
+    text-shadow:0 0 15px #ffd700;
+    animation:glow 1s infinite alternate;
+}
+
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(0);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #ffd700;
+    }
+    to{
+        text-shadow:0 0 30px #ffd700, 0 0 50px #ffea00;
+    }
+}
+</style>
+</head>
+<body>
+
+<button onclick="showMessi()">Bấm vào đây ⚽</button>
+
+<div id="messiBox" class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Lionel_Messi.jpg" alt="Messi">
+    <div class="text">CCBM chứ gửi ⚡</div>
+</div>
+
+<script>
+function showMessi(){
+    document.getElementById("messiBox").style.display = "block";
+}
+</script>
+
+</body>
+</html>
